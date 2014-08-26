@@ -1,6 +1,6 @@
 {
   "name": "loglog-dev-tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Logging transport to chrome dev tools for loglog",
   "main": "index.js",
   "directories": {
@@ -31,7 +31,5 @@
     "url": "https://github.com/goodybag/loglog-dev-tools/issues"
   },
   "homepage": "https://github.com/goodybag/loglog-dev-tools",
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
