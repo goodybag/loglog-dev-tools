@@ -1,5 +1,6 @@
 /**
- * Hand - for element grabbin'
+ * Loglog Dev tools
+ * Loglog transport for chrome dev tools
  */
 
 ;(function(){
