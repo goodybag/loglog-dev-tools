@@ -1,0 +1,37 @@
+{
+  "name": "loglog-dev-tools",
+  "version": "1.0.1",
+  "description": "Logging transport to chrome dev tools for loglog",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "mocha": "^1.21.4"
+  },
+  "peerDependencies": {
+    "loglog": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goodybag/loglog-dev-tools.git"
+  },
+  "keywords": [
+    "loglog",
+    "dev-tools"
+  ],
+  "author": "John Fawcett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goodybag/loglog-dev-tools/issues"
+  },
+  "homepage": "https://github.com/goodybag/loglog-dev-tools",
+  "dependencies": {
+
+  }
+}
