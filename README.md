@@ -2,6 +2,8 @@
 
 > Logging transport to chrome dev tools for loglog
 
+![http://storage.j0.hn/hierarchical-logging.png](http://storage.j0.hn/hierarchical-logging.png)
+
 __Install:__
 
 ```
