@@ -33,15 +33,19 @@
       }
     }
 
-    var ghead   = 0;
-    var groups  = [];
+    var groups = [];
 
     return function( entry ){
       var args = [];
-      var components = entry.parents.slice(0);
+      var components = entry.parents.map( function( component, i ){
+        return {
+          name: component
+        , cid:  entry.parentOriginCids[ i ]
+        };
+      });
 
       if ( entry.component ){
-        components.push( entry.component );
+        components.push({ name: entry.component, cid: entry.originCid });
 
         args.push( '%c[' + entry.parents.concat( entry.component ).join('.') + ']' );
         args.push( 'color: ' + options.levelColor( entry.level ) );
@@ -56,7 +60,7 @@
       // Find where components differs from groups
       var differsAt = -1;
       for ( var i = 0; i < components.length; i++ ){
-        if ( components[i] !== groups[i] ){
+        if ( components[i].cid !== groups[i] ){
           differsAt = i;
           break;
         }
@@ -73,8 +77,8 @@
         }
 
         for ( i = differsAt; i < components.length; i++ ){
-          groups.push( components[i] );
-          console.group( components[i] );
+          groups.push( components[i].cid );
+          console.group( components[i].name );
         }
       }
 
