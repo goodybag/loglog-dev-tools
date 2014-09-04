@@ -66,6 +66,10 @@
         }
       }
 
+      if ( components.length < groups.length ){
+        differsAt = components.length - 1;
+      }
+
       if ( components.length === 0 && groups.length > 0 ){
         differsAt = 0;
       }
