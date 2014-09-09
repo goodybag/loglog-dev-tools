@@ -66,7 +66,8 @@
         }
       }
 
-      if ( components.length < groups.length ){
+      if ( components.length < groups.length )
+      if ( differsAt === -1 ){
         differsAt = components.length - 1;
       }
 
