@@ -10,6 +10,12 @@ __Install:__
 npm install loglog-dev-tools
 ```
 
+Or:
+
+```
+bower install loglog-dev-tools
+```
+
 __Usage:__
 
 ```javascript
