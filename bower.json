@@ -1,0 +1,30 @@
+{
+  "name": "loglog-dev-tools",
+  "main": "index.js",
+  "version": "1.0.6",
+  "homepage": "https://github.com/goodybag/loglog-dev-tools",
+  "authors": [
+    "John Fawcett <jrf0110@gmail.com>"
+  ],
+  "description": "Logging transport to chrome dev tools for loglog",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "loglog",
+    "logging",
+    "dev",
+    "tools",
+    "transport"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
