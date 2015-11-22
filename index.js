@@ -22,6 +22,7 @@
         switch ( level ){
           case 'warn':  return 'orange';
           case 'error': return 'red';
+          case 'debug': return 'green';
           default: return 'blue';
         }
       }
