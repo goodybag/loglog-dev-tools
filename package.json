@@ -1,6 +1,6 @@
 {
   "name": "loglog-dev-tools",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Logging transport to chrome dev tools for loglog",
   "main": "index.js",
   "directories": {
