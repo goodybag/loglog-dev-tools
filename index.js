@@ -6,27 +6,30 @@
 ;(function(){
   'use strict';
 
+  var defaults = {
+    levelMethod: function( level ){
+      switch ( level ){
+        case 'error': return 'error';
+        case 'warn': return 'warn';
+        default: return 'log';
+      }
+    }
+
+  , levelColor: function( level ){
+      switch ( level ){
+        case 'warn':  return 'orange';
+        case 'error': return 'red';
+        case 'debug': return 'green';
+        default: return 'blue';
+      }
+    }
+
+    // If true, will not show parents for each log entry
+  , disableParentPrefix: true
+  };
+
   var loglogDevTools = function( options ){
     options = options || {};
-
-    var defaults = {
-      levelMethod: function( level ){
-        switch ( level ){
-          case 'error': return 'error';
-          case 'warn': return 'warn';
-          default: return 'log';
-        }
-      }
-
-    , levelColor: function( level ){
-        switch ( level ){
-          case 'warn':  return 'orange';
-          case 'error': return 'red';
-          case 'debug': return 'green';
-          default: return 'blue';
-        }
-      }
-    };
 
     for ( var key in defaults ){
       if ( !(key in options ) ){
@@ -45,10 +48,16 @@
         };
       });
 
+      var componentPrefix;
+
       if ( entry.component ){
         components.push({ name: entry.component, cid: entry.originCid });
 
-        args.push( '%c[' + entry.parents.concat( entry.component ).join('.') + ']' );
+        componentPrefix = (
+          options.disableParentPrefix ? [] : entry.parents
+        ).concat( entry.component ).join('.')
+
+        args.push( '%c[' + componentPrefix + ']' );
         args.push( 'color: ' + options.levelColor( entry.level ) );
       }
 
