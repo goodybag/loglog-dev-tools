@@ -47,5 +47,8 @@ __Options:__
       default: return 'blue';
     }
   }
+
+  // If true, will not show parents for each log entry
+, disableParentPrefix: true
 }
 ```
